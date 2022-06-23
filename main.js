@@ -1,6 +1,6 @@
 import "./index.scss";
-import { config } from "./js/config";
-const apiKey = config.API_KEY;
+// import { config } from "./js/config";
+// const apiKey = config.API_KEY;
 const main = document.querySelector("main");
 const favoriteStore = document.getElementById("fav");
 const favoriteBtn = document.getElementById("star");
@@ -21,7 +21,7 @@ console.log(favoriteBtn);
 
 async function fetchWeather(city) {
     await fetch(
-        `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&lang=fr&appid=${apiKey}`
+        `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&lang=fr&appid=ce8ef7aee843acadc925a10a20420947`
     )
         .then((res) => res.json())
         .then((data) => (dataWeather = data));
